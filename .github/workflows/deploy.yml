@@ -31,4 +31,4 @@ jobs:
           path: "."  # Kalau semua file kamu (seperti index.html, dll) ada di root repo, bukan di dalam subfolder
 
       - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@v2  # Pastikan versi benar
+        uses: actions/deploy-pages@v3  # Pastikan versi benar
