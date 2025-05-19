@@ -8,6 +8,8 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
     permissions:
       pages: write
       id-token: write
@@ -24,7 +26,7 @@ jobs:
         run: ls -la && ls -la octacorn-domain-for-sale || echo "Folder not found"
 
       - name: Upload Artifact from Repo octacorn-domain-for-sale
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: github-pages
           # Path ke subdirektori yang ingin dideploy
