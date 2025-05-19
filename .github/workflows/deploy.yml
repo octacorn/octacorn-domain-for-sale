@@ -18,10 +18,10 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Setup Pages
-        uses: actions/configure-pages@v2.0.0
+        uses: actions/configure-pages@v2
 
       - name: Upload Artifact from Repo octacorn-domain-for-sale
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v2.0.0
         with:
           # Path ke subdirektori yang ingin dideploy
           path: "octacorn-domain-for-sale/"
