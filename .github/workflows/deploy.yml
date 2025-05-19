@@ -20,11 +20,15 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v2
 
+      - name: Debug - Check folder exists
+        run: ls -la && ls -la octacorn-domain-for-sale || echo "Folder not found"
+
       - name: Upload Artifact from Repo octacorn-domain-for-sale
         uses: actions/upload-pages-artifact@v3
         with:
           # Path ke subdirektori yang ingin dideploy
           path: "octacorn-domain-for-sale/"
+          # path: "."  # Kalau semua file kamu (seperti index.html) ada di root repo, bukan di dalam subfolder
 
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v2  # Pastikan versi benar
