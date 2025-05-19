@@ -20,7 +20,8 @@ jobs:
         uses: actions/configure-pages@v3
 
       - name: Upload Artifact from Repo octacorn-domain-for-sale
-        uses: actions/upload-pages-artifact@v2  # Pastikan nama action benar
+        # uses: actions/upload-pages-artifact@v2  # Pastikan nama action benar
+        uses: actions/upload-artifact@v3  # Pastikan nama action benar
         with:
           # Path ke subdirektori yang ingin dideploy
           path: "octacorn-domain-for-sale/"
