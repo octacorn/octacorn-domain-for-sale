@@ -1,0 +1,28 @@
+name: Deploy GitHub Pages from Repo octacorn-domain-for-sale
+
+on:
+  push:
+    branches: [ "main" ]  # Ganti dengan branch sumber Anda (misal: main, master)
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v3
+
+      - name: Upload Artifact from Subdirectory
+        uses: actions/upload-pages-artifact@v2
+        with:
+          # Path ke subdirektori yang ingin dideploy
+          path: "octacorn-domain-for-sale/"
+
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v2
