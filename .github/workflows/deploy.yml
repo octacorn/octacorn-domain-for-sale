@@ -15,16 +15,16 @@ jobs:
 
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Setup Pages
-        uses: actions/configure-pages@v3
+        uses: actions/configure-pages@v4
 
       - name: Debug - Check folder exists
         run: ls -la && ls -la octacorn-domain-for-sale || echo "Folder not found"
 
       - name: Upload Artifact from Repo octacorn-domain-for-sale
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v4
         with:
           name: github-pages
           # Path ke subdirektori yang ingin dideploy
@@ -32,6 +32,6 @@ jobs:
           path: "."  # Kalau semua file kamu (seperti index.html, dll) ada di root repo, bukan di dalam subfolder
 
       - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@v3  # Pastikan versi benar
+        uses: actions/deploy-pages@v4  # Pastikan versi benar
         with:
           artifact: github-pages
