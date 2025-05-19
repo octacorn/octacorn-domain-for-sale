@@ -1,6 +1,7 @@
 name: Deploy GitHub Pages from Repo octacorn-domain-for-sale
 
 on:
+  workflow_dispatch:  # Izinkan trigger manual
   push:
     branches: [ "main" ]  # Ganti dengan branch sumber Anda (misal: main, master)
 
