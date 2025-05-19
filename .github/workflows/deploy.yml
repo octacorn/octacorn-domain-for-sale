@@ -27,8 +27,8 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           # Path ke subdirektori yang ingin dideploy
-          # path: "octacorn-domain-for-sale/"
-          path: "."  # Kalau semua file kamu (seperti index.html, dll) ada di root repo, bukan di dalam subfolder
+          path: "octacorn-domain-for-sale/"
+          # path: "."  # Kalau semua file kamu (seperti index.html, dll) ada di root repo, bukan di dalam subfolder
 
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v2  # Pastikan versi benar
