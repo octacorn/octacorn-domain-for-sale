@@ -25,13 +25,19 @@ jobs:
       # - name: Debug - Check folder exists
         # run: ls -la && ls -la octacorn-domain-for-sale || echo "Folder not found"
 
+      - name: Check for symlinks
+        run: find . -type l
+
+      - name: Check directory size
+        run: du -sh .
+
       - name: Upload Artifact from Repo octacorn-domain-for-sale
         uses: actions/upload-artifact@v4
         with:
           name: github-pages
           # Path ke subdirektori yang ingin dideploy
-          path: "octacorn-domain-for-sale/"
-          # path: "."  # Kalau semua file kamu (seperti index.html, dll) ada di root repo, bukan di dalam subfolder
+          # path: "octacorn-domain-for-sale/"
+          path: "."  # Kalau semua file kamu (seperti index.html, dll) ada di root repo, bukan di dalam subfolder
 
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v4
