@@ -28,7 +28,7 @@ jobs:
           name: github-pages
           path: |
             index.html
-            style.css
+            CNAME
 
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v4
