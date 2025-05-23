@@ -1,2 +1,2 @@
-# octacorn-domain-for-sale
-octacorn.com domain for sale
+# octacorn.com
+octacorn.com landing page
